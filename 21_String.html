@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String in javascript</title>
+  </head>
+  <body>
+    <p>The Length of string is :</p>
+    <p id="demo"></p>
+    <h4>The length of the String is :</h4>
+    <p id="demo2"></p>
+
+    <h4>The charater at the given position is :</h4>
+    <p id="demo3"></p>
+    <h4>The charater code at the given position is :</h4>
+    <p id="demo4"></p>
+
+    <h3 id="greeting"></h3>
+    <h4 id="poem"></h4>
+    <script>
+      let text = "ABD sfhjdhedweif,weydweu m dns.jr n";
+      let length = text.length;
+      console.log(length);
+
+      document.getElementById("demo").innerHTML = text.length;
+      let string = 'we are the sp-called "VIkings"from the north. ';
+      let text2 = "It's alright";
+
+      // Insert the backslash in a stirng .
+
+      let text3 = "The character \\ is called backslash  ";
+      document.getElementById("greeting").innerHTML = "Helllo" + " Dollly!";
+
+      let writting = `
+        the Quick
+        brown fox
+        jumps over
+        the lazy dog`;
+
+      console.log(writting);
+
+      // Javaascript Strings as Objects :
+      let x = "John";
+      let y = new String("John");
+
+      console.log(x == y); // output : true
+
+      console.log(x === y); // output : false
+      // beacuse the datatypes are not same.
+
+      //   Basic String Methods
+      // 1. String Length
+
+      let lengthofString = "the bob is the wonderful dog";
+
+      document.getElementById("demo2").innerHTML = lengthofString.length;
+
+      // 2. String CharAt()
+
+      document.getElementById("demo3").innerHTML = lengthofString.charAt(4);
+
+      // 3. StringcharCodeAt() method returns the code of the charater at the specified index in a stirng.
+
+      let char = text.charCodeAt(9);
+      document.getElementById("demo4").innerHTML = lengthofString.charCodeAt(9);
+
+      //   4. StringAt()
+      const name = "W3Schools";
+      let letter = name.at(3);
+      let letter2 = name[2];
+      console.log(letter); //output : c
+      console.log(letter2); // output : S
+
+      //   Note :
+      let code = "helllo World";
+      text[0] = "A"; // Givers no error , But does not work.
+      console.log("code");
+
+      //   5. String Slice():
+
+      let fruits = "Apples, Bananas, Kiwi, Watermelon";
+      let part = fruits.slice(5, 15);
+      console.log("the slice of the fruits is : ", part);
+      let part2 = fruits.slice(7);
+      console.log(part2);
+      let part3 = fruits.slice(-12);
+      console.log(part3);
+
+      let part4 = fruits.slice(-12, -6);
+      console.log(part4);
+
+      //   6. String substr()
+      // substr( ) is similar to slice()
+
+      let str = "Apple, Jamunm, Mango";
+      let pieace = str.substr(7, 6);
+      console.log(pieace);
+      let pieace2 = str.substr(7);
+      console.log(pieace2);
+
+      //   7. String Upper and Lower Case;
+
+      let line = "Hello world";
+      let line2 = line.toUpperCase();
+      let line3 = line.toLowerCase();
+      console.log(line3);
+      console.log(line2);
+
+      // 8. String Contact()
+
+      let line4 = line2.concat(" ", line3);
+      console.log(line4);
+
+      let gretting = "Good Morning , Bob";
+      let Reply = "Hey Good morning , John , Where are you going ?";
+
+      console.log(gretting.concat(" ", Reply));
+
+      // 9. String trim() method removes whitespace from the both sides of a string:
+
+      let str1 = "      Hello world   ";
+      console.log(str1.trim());
+      console.log(str1.trimStart());
+      console.log(str1.trimEnd());
+      console.log(str1.trimLeft());
+
+      //   10. javascript String padding :
+
+      let num = "5";
+      let paddded = num.padStart(4, "0");
+      console.log(paddded);
+      console.log(num.padStart(4, "x"));
+      console.log(num.padEnd(5, "0"));
+      console.log(num.padEnd(5, "x"));
+
+      let numb = 5;
+      let stirng2 = numb.toString();
+      console.log(stirng2.padStart(5, "0"));
+
+      //   11. String repeat() used for the repeat the stirng
+
+      let string3 = "Good Morning ";
+      let result = string3.repeat(3);
+      console.log(result);
+
+      let string4 = "You have achieve the good score";
+      console.log(string4.repeat(9));
+
+      // 12. Replacing String Content:
+
+      let string5 = "Please visit Microsoft! and Microsoft ";
+
+      // Note : By Default the replace() method replaces only the first match:
+      // Replace method is case sensitive.
+
+      let newText = string5.replace("Microsoft", "Google");
+
+      //   Replace all matches , use a regular expression with a /g flag (global match):
+      console.log(string5.replace(/Microsoft/g, "Google"));
+      console.log("The replaced text is a : ", newText);
+
+      // Replace the case insensitive , use a regular expressuins with an /i flag
+
+      let string6 = "Please Enter the Correct code !";
+      let Newtext = string6.replace(/CODE/i, "Password");
+      console.log(Newtext);
+
+      //  13. Javascript String ReplaceAll()
+
+      let note = "Please take care about the Dogs";
+      console.log(note.replaceAll("Dogs", "Cats"));
+
+      // 14. Converting a Stirng to an Array :
+
+      // Javascript Stirng Split
+
+      let string7 = "good job";
+      console.log(string7.split(",")); // Split on commas
+      console.log(string7.split("/"));
+    </script>
+  </body>
+</html>

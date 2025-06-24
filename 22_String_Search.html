@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Search</title>
+  </head>
+  <body>
+    <script>
+      // String Search Methods :
+
+      // 1. String Indexof()
+
+      let text = "Please locate where 'locate' occurs!";
+      let index = text.indexOf("locate");
+      console.log(index); // output : 7
+      console.log(text.indexOf("P"));
+
+      // 2, String LastIndexof()
+      let lastindex = text.lastIndexOf("locate");
+      console.log(lastindex); // output : 21
+      console.log(text.lastIndexOf("people"));
+      //  lastIndexOf() return -1 if the text is not found :
+
+      console.log(text.indexOf("locate", 15));
+
+      // 3. String Search()
+      console.log(text.search("locate"));
+      console.log(text.search(/locate/));
+
+      // Note :
+      // The two methods are NOT equal. These are the differences:
+
+      // The search() method cannot take a second start position argument.
+      // The indexOf() method cannot take powerful search values (regular expressions).
+
+      //   4 . String match():
+      // The match() method returns an array containing the results of matching a string against a string (or a regular expression).
+
+      let line = "The rain in SPAIN stays maily in the plain";
+      console.log(line.match("ain"));
+      console.log(line.match(/ain/));
+      console.log(line.match(/ain/g));
+      console.log(line.match(/ain/gi));
+
+      // 5. String matchAll()
+      // note : The matchAll() method returns an iterator containing the results of matching a string against a string (or a regular expression).
+
+      let string = "Dogs are barking";
+      const newstr = string.matchAll("Cats");
+      console.log(newstr);
+
+      // 6. String includes()
+
+      let string2 = "hello world , welocme to the universes.";
+      console.log(string2.includes("world")); // outpu t:
+      // Check if a string includes "world". Start at position 12:
+      console.log(string2.includes("world", 12)); // outpu t: false
+      console.log(string2.includes("Cats")); //output : false
+
+    //   Notes :
+    // Notes
+// includes() is case sensitive.
+// includes() is an ES6 feature.
+// includes() is not supported in Internet Explorer.
+
+// 7. String StartsWith()
+
+let str = "Good morning";
+console.log(str.startsWith("Good")); // true
+console.log(str.startsWith("morning")); // false
+
+// 8. String Endswith()
+
+console.log(str.endsWith("morning")); // true
+
+let name = "John Deo ";
+console.log(name.endsWith("Deo")); // false
+console.log(name.endsWith("Deo", 11)); // false
+
+
+    </script>
+  </body>
+</html>

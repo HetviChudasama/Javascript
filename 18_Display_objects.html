@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Display Objects</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="car-info"></p>
+    <p id="car-details"></p>
+    <p id="demo2"></p>
+    <script>
+      const person = {
+        name: " john",
+        age: 30,
+        city: "New York",
+      };
+      document.getElementById("demo").innerHTML = person;
+      // Output : [Object Object]
+
+      // Display Properties
+      document.getElementById("demo").innerHTML =
+        person.name + "," + person.age + "," + person.city;
+
+      // Displaying properties in the Loop :
+      const Car = {
+        name: " fiat",
+        price: 50000,
+        date: "14th january",
+        color: " White",
+        Weight: "500Kg",
+        model: "latest 2024",
+      };
+
+      // Build a Text
+      let text = "";
+      for (let x in Car) {
+        for (let x in Car) {
+          text += Car[x] + " ";
+        }
+      }
+
+      // Displya the Text
+      document.getElementById("car-info").innerHTML = text;
+
+      // Using Object.Values()
+
+      // Objects.values() creates an array from the property Values :
+
+      // Create An Array :
+      const myArray = Object.values(Car);
+
+      // Display The Array
+
+      document.getElementById("car-details").innerHTML = myArray;
+
+      //   Using the Objects.entries()
+
+      // Object.entries() makes it simple to use objects in loops:
+
+      const fruits = { Bananas: 500, Oranges: 200, Apples: 700 };
+
+      let texxt = "";
+      for (let [fruits, value] of Object.entries(fruits)) {
+        text += fruits + " : " + value + "<br>";
+      }
+
+      //  Using the JSON.stringigy()
+
+      // Javascript Objects can be converted to a string with JSON method JSON.stringify().
+
+      // JSON.stringify() takes an object and returns a string with the object's properties and values.
+
+      // Create an Object :
+
+    // Create an Object
+const person2 = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+
+// Stringify Object
+let myString = JSON.stringify(person2);
+
+// Display String
+document.getElementById("demo2").innerHTML = myString;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!-- javascript Event -->
+
+<!-- onclick() -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <h1 id="demo1"> </h1>
+    <button
+      onclick="document.getElementById('demo'
+    ).innerHTML = Date()"
+    >
+      This time is ?
+    </button>
+
+    <button onclick="displayDate()">The time is</button>
+
+    <button onchange="document.getElementById('demo2').innerHTML ">
+      hello
+    </button>
+
+    <script>
+      function displayDate() {
+        document.getElementById("demo1").innerHTML = Date();
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numbers</title>
+  </head>
+  <body>
+    <script>
+      //    Note : JavaScript Numbers are Always 64-bit Floating Point
+
+      let x = 0.2 + 0.1;
+      console.log(x); // output : 0.30000000000000004
+
+      let y = (0.2 * 10 + 0.1 * 10) / 10;
+      console.log(y); // output : 0.3
+
+      // If you add two numbers, the result will be a number:
+
+      // Example
+      let x1 = 10;
+      let y1 = 20;
+      let c1 = "30";
+      console.log(x1 + y1 + c1);
+      //   output :
+
+      let z = x1 + y1;
+      let z1 = "the result is :" + x1 + y1;
+      console.log(z1);
+
+      //   If you add two stirngs, the result will be a stirng concationation.
+
+      let a = "10";
+      let b = "20";
+      let c = 30;
+      console.log(a + b + c); //output : 102030
+      console.log(a + b); //output : 1020
+
+      // If you add a number and a string, the result will be a string concatenation:
+
+      // JavaScript will try to convert strings to numbers in all numeric operations:
+
+      let d = "100";
+      let e = "10";
+      console.log(d / e); //output : 10
+      console.log(e / d); //output : 0.1
+      console.log(e * d); //output : 1000
+      console.log(d - e); //output : 90
+
+      //   NaN - Not a Number :
+      //   Note : NaN is a JavaScript reserved word indicating that a number is not a legal number.
+
+      let f = 100 / "Apple";
+      isNaN(f);
+      console.log(f); //output : NaN
+
+      // note : However, if the string is numeric, the result will be a number:
+      console.log(100 / "10");
+
+      let g = NaN;
+      let h = 5;
+      console.log(g + h); //output : NaN
+      console.log(typeof (g + "5")); //output : NaN5
+      // type : stirng
+
+      // Infinity :
+      // note :Infinity (or -Infinity) is the value JavaScript will return if you calculate a number outside the largest possible number.
+
+      //   let myNumber = 2;
+      // Execute until Infinity
+
+      //   while (myNumber != Infinity) {
+      //     total = myNumber * myNumber;
+      //   }
+      //   console.log(total);
+
+      //   Division by 0 (zero) also generates Infinity :
+
+      let i = 2 / 0;
+      console.log(i); //output : Infinity
+      let j = -2 / 0;
+      console.log(j); //output : -Infinity
+
+      // Hexadecimal
+
+      // Note : JavaScript interprets numeric constants as hexadecimal if they are preceded by 0x.
+
+      let k = 0xff;
+      console.log(k); //output : 255
+
+      let myNumber = 32;
+      console.log(myNumber.toString(32));
+      console.log(myNumber.toString(16));
+      console.log(myNumber.toString(12));
+      console.log(myNumber.toString(10));
+      console.log(myNumber.toString(8));
+      console.log(myNumber.toString(2));
+
+      // Javascript BigInt:
+
+      let l = 999999999999999;
+      console.log(l);
+
+      let m = 9999999999999999n;
+      console.log(m);
+
+      let x2 = 1234567890123456789012345n;
+      let y2 = BigInt(1234567890123456789012345);
+      console.log(y2);
+      console.log(typeof y2); //output : bigint
+
+      let x3 = 9007199254740995n;
+      let y3 = 9007199254740995n;
+      let z3 = x3 * y3;
+      console.log(z3); //output : 81129638414606735738984533590025n4
+
+      //   BigInt Decimals
+      let n = 5n;
+      // let o = n/ 2;
+      // let p = Number(n) / 2;
+      // console.log(p);
+    </script>
+  </body>
+</html>

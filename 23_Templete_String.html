@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Templete Strings</title>
+  </head>
+  <body>
+    <script>
+      let text = `Hello world!`;
+      // Quotes inside Strings :
+      let text2 = `He's often called "John"`;
+
+      // Multiline stirng
+
+      let text3 = `the Quick
+        brown fox
+        jumps over
+        the lazy dog`;
+
+      // Interpolation
+
+      // variable Substitution
+
+      let firstname = "John";
+      let lastName = "Deo";
+
+      let sentence = `Welcome ${firstname} , ${lastName}`;
+      console.log(sentence);
+
+      // Expression Substitution
+
+      let price = 10;
+      let VAT = 0.25;
+
+      let total = `total : ${price * (1 + VAT).toFixed(2)}`;
+      console.log(total);
+
+      let header = "Templete Strings";
+      let tags = ["Templete Strings", "javascript", "es6"];
+
+      let html = `<h2>${header} </h2> <ul>`;
+
+      for (const x of tags) {
+        html += `<li>${x}</li>`;
+      }
+
+      html += `</ul>`;
+
+      console.log(html);
+    </script>
+  </body>
+</html>

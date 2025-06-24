@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math</title>
+  </head>
+  <body>
+    <h1>The Round method is :</h1>
+    <h5 id="demo"></h5>
+    <h5 id="demo1"></h5>
+
+    <h5 id="demo2"></h5>
+
+    <h2>The ceil method in the Math Js :</h2>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+
+    <h3>floor method in the math</h3>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+
+    <h3>The trunc() method in th Math</h3>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+
+    <h4>The Sign() Methhod :</h4>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+
+    <h5>The Power() Method :</h5>
+    <p id="Power"></p>
+    <p id="Power2"></p>
+
+    <h5>The square method in the js :</h5>
+    <p id="sqrt"></p>
+    <p id="sqrt1"></p>
+    <p id="sqrt2"></p>
+    <script>
+      // Note : The Math Object
+      // Unlike other objects, the Math object has no constructor.
+
+      // The Math object is static.
+
+      // All methods and properties can be used without creating a Math object first.
+
+      //   Math.round()
+      document.getElementById("demo").innerHTML = Math.round(4.6);
+      document.getElementById("demo1").innerHTML = Math.round(4.5);
+      document.getElementById("demo2").innerHTML = Math.round(4.4);
+
+      //   Math.ceil()
+      document.getElementById("demo3").innerHTML = Math.ceil(4.9);
+      document.getElementById("demo4").innerHTML = Math.ceil(4.7);
+      document.getElementById("demo5").innerHTML = Math.ceil(4.4);
+      document.getElementById("demo6").innerHTML = Math.ceil(-4.2);
+
+      // Math.floor () method :
+
+      document.getElementById("demo7").innerHTML = Math.floor(4.9);
+      document.getElementById("demo8").innerHTML = Math.floor(4.3);
+      document.getElementById("demo9").innerHTML = Math.floor(4.5);
+      document.getElementById("demo10").innerHTML = Math.floor(-4.9);
+
+      // Math.trunc() method returns the integer part of x :
+      document.getElementById("demo11").innerHTML = Math.trunc(4.9);
+      document.getElementById("demo12").innerHTML = Math.trunc(-4.2);
+
+      //   Math.sign() method :
+
+      document.getElementById("demo13").innerHTML = Math.sign(-4);
+      document.getElementById("demo14").innerHTML = Math.sign(0);
+      document.getElementById("demo15").innerHTML = Math.sign(4);
+
+      // Math.pow()
+      document.getElementById("Power").innerHTML = Math.pow(8, 2);
+      document.getElementById("Power2").innerHTML = Math.pow(8, 5);
+
+      // Math.sqrt():
+      document.getElementById("sqrt").innerHTML = Math.sqrt(64);
+      //   document.getElementById("sqrt1").innerHTML = Math.SQRT2(64);
+      //   document.getElementById("sqrt2").innerHTML = Math.SQRT1_2(64);
+
+      // Math.abs():
+      console.log(Math.abs(-4.7));
+      // Math.sin():
+      console.log(Math.sin((90 * Math.PI) / 180)); //returns : 01
+
+    //   Math.cos () :
+    console.log(Math.cos(0 * Math.PI / 180) ); //returns : 01
+    
+    // Math.min() and Math.max():
+
+    console.log(Math.min(0, 150, 30, 20, -8, -200));
+    
+    // Math.max() :
+    console.log(Math.max(0, 150, 30, 20, -8, -200));
+    
+    // Math.random():
+    console.log(Math.random());
+    
+    // Math.log() :
+        // Note : Math.log(x) returns the natural logarithm of x.
+
+        console.log(Math.log(1));
+        console.log(Math.log(2));
+        console.log(Math.log(3));
+        console.log(Math.log(10));
+
+        // Math.log2() method :
+
+        console.log(Math.log2(8));
+        
+        // Math.log10() method :
+        console.log(Math.log10(1000));
+
+        // Math.abs():
+        console.log(Math.abs(8.9));
+        
+        
+    </script>
+  </body>
+</html>
