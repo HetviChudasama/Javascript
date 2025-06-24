@@ -43,3 +43,56 @@ var c = function(x,y){
 
 // ES6
 const b = (x,y) => x * y;
+
+// Function declaration 
+
+function sum(A,b) {
+    return A +b;
+}
+console.log(sum(9,5));
+
+// Function expression :
+
+// A javascript function can alsob ne defined using an expressions.
+
+const y = function (a,b){
+    return a*b
+}
+
+console.log(y(6,2));
+
+const food = function (variaety , price) {
+    return variaety + "-" + price 
+}
+
+console.log(food("Munchurian" , 700));
+
+// Using the Function() Constructor :
+
+const myfunction = new Function ("c" ,"b" , "return c * b");
+
+let w = myfunction(6,8)
+console.log(w);
+
+// Function hoisting
+
+multuplication(9) 
+
+function multuplication (y) {
+    return y*y;
+}
+console.log(multuplication(9));
+
+
+// Self- Invoking Function: 
+
+// Function expressions can be made "self-invoking".
+
+// A self-invoking expression is invoked (started) automatically, without being called.
+
+// Function expressions will execute automatically if the expression is followed by ().
+
+(function () {
+    let x = "Hello!"
+})();
+
